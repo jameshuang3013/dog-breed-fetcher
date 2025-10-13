@@ -94,7 +94,7 @@ Note: The example in the documentation doesn't show it, but if you specify a bre
   Update the code so that this exception is a **checked exception** and modify any other code as needed so that the code
   is able to compile and run.
 
-> If all tests are passing, then you have completed the assignment!
+> If all tests are passing, then you have completed the assignment!!
 
 ---
 
