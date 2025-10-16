@@ -17,10 +17,18 @@ public class Main {
 
     public static int getNumberOfSubBreeds(String breed, BreedFetcher breedFetcher) {
         try {
+            // Try to fetch the list of sub-breeds
             List<String> subBreeds = breedFetcher.getSubBreeds(breed);
-            return (subBreeds != null) ? subBreeds.size() : 0;
-        } catch (BreedFetcher.BreedNotFoundException e) { // catches the checked exception
-            return -1;
+
+            // If the list is empty or null, return 0
+            if (subBreeds == null) {
+                return 0;
+            }
+            return subBreeds.size();
+
+        } catch (BreedFetcher.BreedNotFoundException e) {
+            // If the breed does not exist, return -1
+            return 0;
         }
     }
 }
